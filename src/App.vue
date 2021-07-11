@@ -40,7 +40,7 @@ html {
 }
 
 section {
-  padding: 100px 0 0 0;
+  padding: 80px 0 0 0;
 
   &:last-child {
     margin-bottom: 100px;

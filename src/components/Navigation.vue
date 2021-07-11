@@ -79,7 +79,7 @@ watch: {
 <style lang="scss" scoped>
 .sticky {
     background: crimson;
-    padding: 15px;
+    padding: 15px 0;
 
     .container{
         .brand {
@@ -109,22 +109,20 @@ header {
     .mobile-nav {
         display: flex;
         flex-direction: column;
-        padding-left: 35px;
-        padding-top: 25px;
+        padding-top: 50px;
+        align-items: center;
         position: fixed;
-        height: 100%;
         background: #111;
-        left: 0;
         top: 0;
-        width: 70%;
-        max-width: 250px;
-        box-shadow: 6px 4px -1px rgba(0, 0, 0, 0.3), 4px 2px -1px rgba(0, 0, 0, 0.16);
+        width: 100%;
+        height: 100%;
+        z-index: 199;
 
         .link {
             padding: 15px 0;
             display: inline block;
             color: #fff;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 500;
             transition: color 0.3s ease;
 
@@ -171,6 +169,7 @@ header {
             color: #fff;
             font-size: 23px;
             cursor: pointer;
+            z-index: 200;
         }
     }
 
@@ -180,14 +179,14 @@ header {
     }
 
     .mobile-nav-enter-from {
-        transform: translateX(-250px);
+        transform: translateX(-100%);
     }
 
     .mobile-nav-enter-to {
         transform: translateX(0);
     }
     .mobile-nav-leave-to {
-        transform:translateX(-250px)
+        transform:translateX(-100%)
     }
 
 }
@@ -211,8 +210,7 @@ header {
 @media (max-width: 750px) {
     header {
         .container {
-            padding: 0 25px;
-            
+            padding: 0 25px;  
         }
     }
 }

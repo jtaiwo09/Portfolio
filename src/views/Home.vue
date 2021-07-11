@@ -21,7 +21,7 @@
           <div class="carousel owl-carousel">
             <Works :project='project' v-for="(project, index) in projects" :key='index'/>
           </div>
-          <h2>Like to see more of my project? <router-link to="#">Click here</router-link></h2>
+          <!-- <h2>Like to see more of my project? <router-link to="#">Click here</router-link></h2> -->
       </div>
   </section>
 </template>
@@ -117,6 +117,7 @@ export default {
     }
     .text-1 {
       font-size: 27px;
+      margin-bottom: 4px;
     }
     .text-2 {
       font-size: 75px;
@@ -387,16 +388,24 @@ export default {
 
 
 @media (max-width: 780px) {
+  section {
+    padding-top: 40px;
+  }
   .content {
     flex-direction: column;
   }
   .skills {
+    .title {
+          margin-bottom: 40px;
+        }
     .content {
+      gap: 0;
       .left {
         margin-bottom: 60px;
+        
       }
       .right {
-        width: 80%;
+        width: 100%;
         .bars {
           width: 100%
         }
@@ -418,11 +427,25 @@ export default {
 }
 
 @media (max-width: 500px) {
+  .container {
+    padding: 0 30px;
+  }
   .home {
       .home-content {
+        
+        padding-left: 10px;
         .text-2 { font-size: 50px;}
         .text-3 { font-size: 27px;}
-        
+      }
+    }
+    .about {
+      .content {
+        .left {
+          img {
+          height: 300px;
+          width: 300px;
+        }
+        }
       }
     }
 }
@@ -430,12 +453,22 @@ export default {
 @media (max-width: 435px) {
   .home {
       .home-content {
-        .text-1 { font-size: 20Spx}
-        .text-2 { font-size: 40px;}
+        .text-1 { font-size: 20px}
+        .text-2 { font-size: 43px;}
         .text-3 { font-size: 23px;}
         .button {
           font-size: 23px;
           padding: 8px 25px;
+        }
+      }
+    }
+    .about {
+      .content {
+        .left {
+          img {
+          height: 200px;
+          width: 200px;
+        }
         }
       }
     }
