@@ -1,19 +1,14 @@
 <template>
     <div class="app-wrapper">
     <div class="app">
-      <Navigation/>
-      <Home />
       <router-view />
     </div>
   </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation';
-import Home from './components/Home';
 export default {
   name: 'app',
-  components: { Navigation, Home }
 }
 </script>
 
@@ -26,6 +21,10 @@ export default {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .app {
@@ -41,7 +40,11 @@ export default {
 }
 
 section {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
 
   .title {
     text-align: center;
