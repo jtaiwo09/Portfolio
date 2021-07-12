@@ -57,6 +57,81 @@ name: 'skills',
 }
 </script>
 
-<style>
+<style lang="scss">
+.skills {
+  .title {
+    &::after {
+      content: 'what i know'
+    }
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .left, .right {
+      flex: 50%;
+    }
+    .left {
+      .text {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      p {
+        text-align: justify;
+      }
+      .button {
+        font-size: 18px;
+        padding: 8px 16px;
+      }
+    }
+    .right {
+      .bars {
+        margin-bottom: 15px;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+      span {
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .line {
+        width: 100%;
+        height: 5px;
+        background-color: lightgrey;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: crimson;
+        }
+      }
+      .html::before {
+        width: 90%;
+      }
+      .css::before {
+        width: 70%;
+      }
+      .js::before {
+        width: 80%;
+      }
+      .php::before {
+        width: 50%;
+      }
+      .mysql::before {
+        width: 60%;
+      }
+    }
+  }
+}
 
 </style>

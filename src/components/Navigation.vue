@@ -7,8 +7,8 @@
             <nav class="nav-links" v-if="!mobile">
                 <a href="#home" class="link">Home</a>
                 <a href="#about" class="link">About</a>
+                <a href="#skills" class="link">Skills</a>
                 <a href="#works" class="link">Works</a>
-                <a href="#skills" class="link">Skill</a>
             </nav>
             <div class="menu-btn" v-if="mobile && !mobileNav" @click="toggleMobileNav">
                 <i class="fas fa-bars"></i>
@@ -21,8 +21,8 @@
             <ul class="mobile-nav"  v-if="mobileNav" @click="toggleMobileNav">
                 <a href="#home" class="link">Home</a>
                 <a href="#about" class="link">About</a>
+                <a href="#skills" class="link">Skills</a>
                 <a href="#works" class="link">Works</a>
-                <a href="#skills" class="link">Skill</a>
             </ul>
         </transition>
   </header>
@@ -109,8 +109,8 @@ header {
     .mobile-nav {
         display: flex;
         flex-direction: column;
-        padding-top: 50px;
         align-items: center;
+        justify-content: center;
         position: fixed;
         background: #111;
         top: 0;
@@ -122,9 +122,11 @@ header {
             padding: 15px 0;
             display: inline block;
             color: #fff;
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 500;
             transition: color 0.3s ease;
+            text-transform: uppercase;
+            transition: all .3s ease;
 
             &:hover {
                 color: crimson;

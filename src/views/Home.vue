@@ -8,7 +8,10 @@
       <div class="home-content">
         <div class="text-1">Hello, my name is</div>
         <div class="text-2">Taiwo Joseph</div>
-        <div class="text-3">And I'm a <span>Web Developer</span></div>
+        <div class="text-3">And I'm a 
+          <span class="typed-text">{{ typeValue}}</span>
+          <span class="cursor" :class="{'typing': typeStatus }">&nbsp;</span>
+        </div>
         <router-link class="button" to="#">Hire me</router-link>
       </div>
     </div>
@@ -17,29 +20,41 @@
   <Skills />
   <section class="works" id="works">
       <div class="container">
-          <h2 class="title">My Works</h2>
-          <div class="carousel owl-carousel">
-            <Works :project='project' v-for="(project, index) in projects" :key='index'/>
-          </div>
-          <!-- <h2>Like to see more of my project? <router-link to="#">Click here</router-link></h2> -->
+        <vueper-slides
+        autoplay
+        class="no-shadow"
+      :visible-slides='3'
+      slide multiple
+      :gap='3'
+      :slide-ratio='1 / 4'
+      :dragging-distance='200'>
+        <vueper-slide v-for="(project, i) in projects" :key="i"/>
+        <template v-slot:content>
+          Hello World
+        </template>
+      </vueper-slides>
       </div>
   </section>
 </template>
 
 <script>
+// import { VueperSlides, VueperSlide } from 'vueperslides'
+// import 'vueperslides/dist/vueperslides.css'
 import Navigation from '../components/Navigation.vue';
 import About from '../components/About.vue';
 import Skills from '../components/Skills.vue';
-import Works from '../components/Works.vue';
+// import Works from '../components/Works.vue';
+import mixin from '../mixins/mixin';
 export default {
   name: "home",
-  components: {Navigation, About, Skills, Works},
+  components: {Navigation, About, Skills},
   data(){
     return {
       scrollPos: 0,
       showScrollUpBtn: null,
     }
   },
+  mixins: [mixin],
   created(){
     window.addEventListener('scroll', this.checkScroll);
   },
@@ -57,7 +72,7 @@ export default {
     },
     handleScroll(){
       window.scrollTo({top: 0, behaviour: 'smooth'})
-    }
+    },
   },
   watch: {
     scrollPos(newValue){
@@ -74,6 +89,18 @@ export default {
 </script>
 
 <style lang="scss">
+.typicalWrapper::after {
+  content: "|";
+  animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
 //scroll-up-btn
 .scroll-up-btn {
   position: fixed;
@@ -128,217 +155,30 @@ export default {
       font-size: 40px;
       margin: 5px 0;
 
-      span {
+      .typed-text {
         color: crimson;
         font-weight: 500;
       }
-    }
-  }
-}
+      .cursor {
+        display: inline-block;
+        margin-left: 3px;
+        width: 4px;
+        background-color: #fff;
+        animation: cursorBlink 1s infinite;
 
-// about section styling
-.about {
-  .title {
-    &::after {
-      content: "who i am";
-    }
-  }
-  .content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    .left {
-      flex: 45%;
-      img {
-        width: 400px;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 6px;
-      }
-    }
-    .right {
-      flex: 55%;
-      .text {
-        font-size: 25px;
-        font-weight: 600;
-        margin-bottom: 10px;
-
-        span {
-          color: crimson;
-        }
-      }
-      p {
-        text-align: justify;
-      }
-      .button {
-        padding: 10px 30px;
-        font-size: 20px;
-      }
-    }
-  }
-}
-
-//Skill section
-.skills {
-  .title {
-    &::after {
-      content: 'what i know'
-    }
-  }
-  .content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-    .left, .right {
-      flex: 50%;
-    }
-    .left {
-      .text {
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-      p {
-        text-align: justify;
-      }
-      .button {
-        font-size: 18px;
-        padding: 8px 16px;
-      }
-    }
-    .right {
-      .bars {
-        margin-bottom: 15px;
-      }
-      .info {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 5px;
-      }
-      span {
-        font-weight: 500;
-        font-size: 18px;
-      }
-      .line {
-        width: 100%;
-        height: 5px;
-        background-color: lightgrey;
-        position: relative;
-
-        &::before {
-          content: '';
-          position: absolute;
-          height: 100%;
-          left: 0;
-          top: 0;
-          background: crimson;
-        }
-      }
-      .html::before {
-        width: 90%;
-      }
-      .css::before {
-        width: 70%;
-      }
-      .js::before {
-        width: 80%;
-      }
-      .php::before {
-        width: 50%;
-      }
-      .mysql::before {
-        width: 60%;
-      }
-    }
-  }
-}
-
-//Work Sections
-.works {
-  .title {
-    &::after {
-      content: 'My projects';
-    }
-  }
-  .carousel {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    .cards, .info {
-      flex: 1;
-    }
-
-    .cards {
-      background: #222;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.5s ease;
-      max-height: 250px;
-      max-width: 250px;
-      display: flex;
-      flex-direction: column;
-
-      &:hover {
-        background: crimson;
-        transform: scale(1.04) rotateZ(-3deg);
-        box-shadow: 4px 6px -1px rgba(0, 0, 0, 0.30) 2px 4px -1px rgba(0, 0, 0, 0.16);
-
-        img {
-          border-color: #fff;
-        }
-      }
-      img, .info { flex: 50%}
-
-      img {
-        z-index: 1;
-        height: 100;
-        width: 100%;
-        min-height: 120px;
-        border-radius: 8px 8px 0 0;
-        object-fit: cover;
-        border: 5px solid crimson;
-      }
-
-      .info {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        z-index: 3;
-        padding: 10px 16px;
-        color: #fff;
-
-        h4 {
-          padding-bottom: 6px;
-          font-size: 20px;
-          font-weight: 400;
-        }
-        .description {
-          white-space: nowrap;
-          font-size: 14px;
-          width: 100%;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        .link {
-          margin-top: auto;
-          font-weight: 500;
-          padding-bottom: 4px;
-          color: #fff;
-          font-size: 12px;
+        &.typing {
+          animation: none;
         }
       }
     }
   }
 }
 
-
-
-
+@keyframes cursorBlink {
+  49% { background-color: #fff; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+}
 
 
 
@@ -389,7 +229,7 @@ export default {
 
 @media (max-width: 780px) {
   section {
-    padding-top: 40px;
+    padding-top: 100px;
   }
   .content {
     flex-direction: column;
@@ -453,9 +293,6 @@ export default {
 @media (max-width: 435px) {
   .home {
       .home-content {
-        .text-1 { font-size: 20px}
-        .text-2 { font-size: 43px;}
-        .text-3 { font-size: 23px;}
         .button {
           font-size: 23px;
           padding: 8px 25px;
