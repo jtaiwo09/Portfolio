@@ -22,7 +22,7 @@
             Repellendus natus praesentium, quo temporibus autem cum ex maxime a
             ad. Quam qui accusamus nesciunt eligendi repellendus voluptatem nam.
           </p>
-          <button class="button" @click="download">Download CV</button>
+          <a class="button" href="https://drive.google.com/uc?export=download&id=0BzSnhRy7DFPNeVpWU3pvcUx5WVVoZ2VhNUFybGhSZnBScDE0" target="_blank">Download CV</a>
         </div>
       </div>
     </div>

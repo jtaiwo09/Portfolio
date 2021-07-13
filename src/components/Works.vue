@@ -1,103 +1,109 @@
 <template>
-        <div class="cards">
-        <img :src="require(`../assets/images/${project.image}.png`)" alt="">
-        <div class="info">
-            <h4>{{project.title}}</h4>
-            <div class="description">
-                {{project.description}}
-            </div>
-            <router-link to="#" class="link">Read More...</router-link>
-        </div>
+  <div class="cards">
+      <div class="card" v-for="(project, i) in projects" :key="i">
+            <img :src="require(`@/assets/images/${project.image}`)" alt="">
+    <div :class="{'overlay': taiwo}">
+      <div class="text">
+        <h2>{{project.title}}</h2>
+        <p>{{project.title}}</p>
+        <a class='button' :href="profile.link"></a>
+      </div>
     </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
 name: 'works',
-components: { },
-props: ['project'],
+data(){
+  return {
+    taiwo: true
+  }
+},
+computed: {
+  projects(){
+    return this.$store.state.projects;
+  }
+}
+
 }
 </script>
 
 <style lang="scss">
-//Work Sections
+
+
+
 .works {
-  .title {
-    &::after {
-      content: 'My projects';
-    }
-  }
-  .carousel {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    .cards, .info {
-      flex: 1;
-    }
-
+  .container {
     .cards {
-      background: #222;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.5s ease;
-      max-height: 250px;
-      max-width: 250px;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      max-width: 80%;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 20px;
 
-      &:hover {
-        background: crimson;
-        transform: scale(1.04) rotateZ(-3deg);
-        box-shadow: 4px 6px -1px rgba(0, 0, 0, 0.30) 2px 4px -1px rgba(0, 0, 0, 0.16);
-
-        img {
-          border-color: #fff;
-        }
-      }
-      img, .info { flex: 50%}
-
-      img {
-        z-index: 1;
-        height: 100;
-        width: 100%;
-        min-height: 120px;
-        border-radius: 8px 8px 0 0;
-        object-fit: cover;
-        border: 5px solid crimson;
-      }
-
-      .info {
-        height: 100%;
+      .card{
+        max-height: 300px;
+        max-width: 250px;
+        background: #fff;
+        margin-bottom: 50px;
         display: flex;
         flex-direction: column;
-        z-index: 3;
-        padding: 10px 16px;
-        color: #fff;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.5s ease;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+        position: relative;
 
-        h4 {
-          padding-bottom: 6px;
-          font-size: 20px;
-          font-weight: 400;
+        img, .text {
+          flex: 1;
         }
-        .description {
-          white-space: nowrap;
-          font-size: 14px;
+        img {
           width: 100%;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          object-fit: cover;
+          min-height: 200px;
+          border-radius: 8px 8px 0 0;
         }
-        .link {
-          margin-top: auto;
-          font-weight: 500;
-          padding-bottom: 4px;
+        .text {
+          padding: 32px 16px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          p {
+            margin-top: auto;
+          }
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          background: #000;
+          opacity: 0;
+          border-radius: 8px;
           color: #fff;
-          font-size: 12px;
-        }
+
+          text {
+            
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            position: absolute;
+          }
+
+          &:hover {
+            opacity: 0.8;
+          }
+}
       }
     }
   }
 }
-
 </style>

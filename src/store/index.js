@@ -5,44 +5,44 @@ export default createStore({
     projects: [
       {
         id: 1,
-        title: 'FireBlog',
+        title: 'Beach Resort',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi est similique hic tempore mollitia a, autem accusantium maiores eos.',
-        image: require('@/assets/images/profile-1.png'),
+        image: 'beachResort.jpeg',
         link: 'https://www.fireblogspot.org'
       },
       {
         id: 2,
-        title: 'My Portfolio',
+        title: 'Chat App',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi est similique hic tempore mollitia a, autem accusantium maiores eos.',
-        image: require('@/assets/images/profile-1.png'),
+        image: 'chat.jpeg',
         link: 'https://www.fireblogspot.org'
       },
       {
         id: 3,
-        title: 'Chat App',
+        title: 'Alan New App',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi est similique hic tempore mollitia a, autem accusantium maiores eos.',
-        image: require('@/assets/images/profile-1.png'),
+        image: 'alan.jpeg',
         link: 'https://www.fireblogspot.org'
       },
       {
         id: 3,
         title: 'Facebook',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi est similique hic tempore mollitia a, autem accusantium maiores eos.',
-        image: require('@/assets/images/profile-1.png'),
+        image: 'ecommerce.jpeg',
         link: 'https://www.fireblogspot.org'
       },
       {
         id: 3,
         title: 'Twitter',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi est similique hic tempore mollitia a, autem accusantium maiores eos.',
-        image: require('@/assets/images/profile-1.png'),
+        image: 'gallery.jpeg',
         link: 'https://www.fireblogspot.org'
       },
       {
         id: 3,
         title: 'Instagram',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi est similique hic tempore mollitia a, autem accusantium maiores eos.',
-        image: require('@/assets/images/profile-1.png'),
+        image: 'profile-1.png',
         link: 'https://www.fireblogspot.org'
       }
     ]

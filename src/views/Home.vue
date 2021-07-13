@@ -19,21 +19,12 @@
   <About />
   <Skills />
   <section class="works" id="works">
-      <div class="container">
-        <vueper-slides
-        autoplay
-        class="no-shadow"
-      :visible-slides='3'
-      slide multiple
-      :gap='3'
-      :slide-ratio='1 / 4'
-      :dragging-distance='200'>
-        <vueper-slide v-for="(project, i) in projects" :key="i"/>
-        <template v-slot:content>
-          Hello World
-        </template>
-      </vueper-slides>
-      </div>
+          <div class="container">
+            <h2 class="title">Projects</h2>
+            <div class="content">
+              <Works />
+            </div>
+          </div>
   </section>
 </template>
 
@@ -43,11 +34,11 @@
 import Navigation from '../components/Navigation.vue';
 import About from '../components/About.vue';
 import Skills from '../components/Skills.vue';
-// import Works from '../components/Works.vue';
+import Works from '../components/Works.vue';
 import mixin from '../mixins/mixin';
 export default {
   name: "home",
-  components: {Navigation, About, Skills},
+  components: {Navigation, About, Skills, Works},
   data(){
     return {
       scrollPos: 0,
@@ -136,7 +127,7 @@ export default {
   min-height: 500px;
 
   .container {
-    margin: 50px 0 auto 0px;
+    margin: auto 0 auto 0px;
   }
   .home-content {
     .button {

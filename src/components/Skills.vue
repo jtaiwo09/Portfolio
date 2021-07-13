@@ -46,9 +46,39 @@
                     </div>
                 </div>
             </div>
+            <div class="other-skills">
+              <h2>Other Skills</h2>
+              <div class="bg">
+                <div class="skills-content">
+                <div class="item-container">
+                  <img :src="require('../assets/Icons/sass.svg')" alt="">
+                  <p>SASS</p>
+                </div>
+                <div class="item-container">
+                  <img :src="require('../assets/Icons/react.svg')" alt="">
+                  <p>React</p>
+                </div>
+                <div class="item-container">
+                  <img :src="require('../assets/Icons/git.svg')" alt="">
+                  <p>Git</p>
+                </div>
+                <div class="item-container">
+                  <img :src="require('../assets/Icons/firebase.svg')" alt="">
+                  <p>Firebase</p>
+                </div>
+                <div class="item-container">
+                  <img :src="require('../assets/Icons/jquery.svg')" alt="">
+                  <p>JQuery</p>
+                </div>
+                <div class="item-container">
+                  <img :src="require('../assets/Icons/vscode.svg')" alt="">
+                  <p>VS Code</p>
+                </div>
+              </div>
+              </div>
+            </div>
         </div>
     </section>
-
 </template>
 
 <script>
@@ -132,6 +162,46 @@ name: 'skills',
       }
     }
   }
+
+    .other-skills {
+    margin-top: 30px;
+    h2 {
+      font-size: 20px;;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+      .bg {
+        padding: 45px;
+        border-radius: 15px;
+        background-color: #f1f1f1;
+
+        .skills-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-gap: 50px;
+
+        .item-container {
+          text-align: center;
+          padding: 10px;
+          border-radius: 10px;
+          background: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: all .3 ease-in;
+
+          &:hover {
+            box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+          }
+
+          img {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+      }
+  }
 }
+
 
 </style>
