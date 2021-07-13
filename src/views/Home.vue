@@ -134,9 +134,9 @@ export default {
   height: 100vh;
   color: #fff;
   min-height: 500px;
-  
+
   .container {
-    margin: 35px 0 auto 0px;
+    margin: 45px 0 auto 0px;
   }
   .home-content {
     .button {
@@ -276,7 +276,7 @@ export default {
         
         padding-left: 10px;
         .text-2 { font-size: 50px;}
-        .text-3 { font-size: 27px;}
+        .text-3 { font-size: 20px;}
       }
     }
     .about {
