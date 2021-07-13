@@ -6,7 +6,7 @@
   <section class="home" id="home">
     <div class="container">
       <div class="home-content">
-        <div class="text-1">Hello, my name is</div>
+        <div class="text-1">Hi, my name is</div>
         <div class="text-2">Taiwo Joseph</div>
         <div class="text-3">And I'm a 
           <span class="typed-text">{{ typeValue}}</span>
