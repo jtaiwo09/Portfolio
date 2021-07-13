@@ -3,7 +3,7 @@ const mixin = {
       return {
         typeValue: '',
         typeStatus: false,
-        typeArray: ['Developer', 'Freelancer', 'Designer'],
+        typeArray: ['Web Developer', 'Freelancer'],
         typingSpeed: 200,
         erasingSpeed: 100,
         newTextDelay: 2000,

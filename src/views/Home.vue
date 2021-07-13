@@ -134,8 +134,9 @@ export default {
   height: 100vh;
   color: #fff;
   min-height: 500px;
+  
   .container {
-    margin: auto 0 auto 0px;
+    margin: 35px 0 auto 0px;
   }
   .home-content {
     .button {
