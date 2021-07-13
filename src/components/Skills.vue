@@ -179,7 +179,8 @@ name: 'skills',
         .skills-content {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        grid-gap: 50px;
+        grid-column-gap: 50px;
+        grid-row-gap: 20px;
 
         .item-container {
           text-align: center;

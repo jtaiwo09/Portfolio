@@ -9,6 +9,7 @@
                 <a href="#about" class="link">About</a>
                 <a href="#skills" class="link">Skills</a>
                 <a href="#works" class="link">Works</a>
+                <a href="#contact" class="link">Contact</a>
             </nav>
             <div class="menu-btn" v-if="mobile && !mobileNav" @click="toggleMobileNav">
                 <i class="fas fa-bars"></i>
@@ -23,6 +24,7 @@
                 <a href="#about" class="link">About</a>
                 <a href="#skills" class="link">Skills</a>
                 <a href="#works" class="link">Works</a>
+                <a href="#contact" class="link">Contact</a>
             </ul>
         </transition>
   </header>

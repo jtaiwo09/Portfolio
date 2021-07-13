@@ -12,20 +12,14 @@
           <span class="typed-text">{{ typeValue}}</span>
           <span class="cursor" :class="{'typing': typeStatus }">&nbsp;</span>
         </div>
-        <router-link class="button" to="#">Hire me</router-link>
+        <a class="button" href="#contact">Hire me</a>
       </div>
     </div>
   </section>
   <About />
   <Skills />
-  <section class="works" id="works">
-          <div class="container">
-            <h2 class="title">Projects</h2>
-            <div class="content">
-              <Works />
-            </div>
-          </div>
-  </section>
+  <Works />
+  <Contact />
 </template>
 
 <script>
@@ -35,10 +29,12 @@ import Navigation from '../components/Navigation.vue';
 import About from '../components/About.vue';
 import Skills from '../components/Skills.vue';
 import Works from '../components/Works.vue';
+import Contact from '../components/Contact.vue';
 import mixin from '../mixins/mixin';
+
 export default {
   name: "home",
-  components: {Navigation, About, Skills, Works},
+  components: {Navigation, About, Skills, Works, Contact},
   data(){
     return {
       scrollPos: 0,

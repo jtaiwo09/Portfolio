@@ -1,12 +1,26 @@
 <template>
-  <div class="cards">
-      <div class="card" v-for="(project, i) in projects" :key="i">
-            <img :src="require(`@/assets/images/${project.image}`)" alt="">
-    <div :class="{'overlay': taiwo}">
-      <h2>{{project.title}}</h2>
-    </div>
-    </div>
-  </div>
+  <section class="works" id="works">
+          <div class="container">
+            <h2 class="title">Projects</h2>
+            <div class="content">
+              <div class="cards">
+                <div class="card" v-for="(project, i) in projects" :key="i">
+                  <img :src="require(`@/assets/images/${project.image}`)" alt="">
+                  <div :class="{'overlay': taiwo}">
+                    <div class="hover-content">
+                      <h2>{{project.title}}</h2>
+                      <p>{{project.description}}</p>
+                      <div class="action-btn">
+                        <button class="button" @click="visitLink(project.link)">Visit Site</button>
+                        <button class="button" :disabled="disabled" @click="visitLink(project.github)">Github</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+  </section>
 </template>
 
 <script>
@@ -14,12 +28,25 @@ export default {
 name: 'works',
 data(){
   return {
-    taiwo: true
+    taiwo: true,
+    disabled: null,
   }
 },
 computed: {
   projects(){
     return this.$store.state.projects;
+  }
+},
+methods: {
+  visitLink(url){
+    if(url != ""){
+      this.disabled = false;
+      window.open(url);
+      return;
+    } else {
+      this.disabled = true;
+      return;
+    }
   }
 }
 
@@ -27,16 +54,16 @@ computed: {
 </script>
 
 <style lang="scss">
-
-
-
 .works {
   .container {
+    .title {
+      &::after {
+        content: "what i've done";
+      }
+    }
     .cards {
       display: flex;
       justify-content: center;
-      max-width: 80%;
-      margin: auto;
       flex-wrap: wrap;
       gap: 20px;
 
@@ -47,31 +74,18 @@ computed: {
         margin-bottom: 50px;
         display: flex;
         flex-direction: column;
-        cursor: pointer;
         border-radius: 8px;
         transition: all 0.5s ease;
         box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
         position: relative;
 
-        img, .text {
-          flex: 1;
-        }
         img {
           width: 100%;
-          object-fit: cover;
-          min-height: 200px;
-          border-radius: 8px 8px 0 0;
-        }
-        .text {
-          padding: 32px 16px;
           height: 100%;
-          display: flex;
-          flex-direction: column;
-
-          p {
-            margin-top: auto;
-          }
+          object-fit: cover;
+          border-radius: 8px;
         }
+
         .overlay {
           position: absolute;
           top: 0;
@@ -84,20 +98,54 @@ computed: {
           opacity: 0;
           border-radius: 8px;
           color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          transition: all 0.3s ease-in;
 
-          h2 {
-            
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+          .hover-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15px;
             text-align: center;
-            position: absolute;
+            top: 20px;
+
+            h2 {
+              font-size: 20px;
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+            p {
+              margin-bottom: 10px;
+            }
+            .action-btn {
+              display: flex;
+              gap: 20px;
+
+              .button {
+                padding: 8px 12px;
+                text-transform: uppercase;
+                font-size: 12px;
+                cursor: pointer;
+
+                &:hover{
+                  background: crimson;
+                  color: #fff;
+                }
+              }
+            }
           }
 
           &:hover {
-            opacity: 0.8;
+            opacity: 0.9;
           }
-}
+        }
+        
+        &:hover {
+          box-shadow: 8px 14px 12px rgba(0,0,0,0.6);
+        }
       }
     }
   }
