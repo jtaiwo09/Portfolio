@@ -136,7 +136,7 @@ export default {
   min-height: 500px;
 
   .container {
-    margin: 45px 0 auto 0px;
+    margin: 50px 0 auto 0px;
   }
   .home-content {
     .button {

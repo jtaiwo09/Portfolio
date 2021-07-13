@@ -120,6 +120,7 @@ header {
 
         .link {
             padding: 15px 0;
+            margin-bottom: 15px;
             display: inline block;
             color: #fff;
             font-size: 25px;
@@ -127,6 +128,10 @@ header {
             transition: color 0.3s ease;
             text-transform: uppercase;
             transition: all .3s ease;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
 
             &:hover {
                 color: crimson;
