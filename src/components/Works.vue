@@ -3,11 +3,7 @@
       <div class="card" v-for="(project, i) in projects" :key="i">
             <img :src="require(`@/assets/images/${project.image}`)" alt="">
     <div :class="{'overlay': taiwo}">
-      <div class="text">
-        <h2>{{project.title}}</h2>
-        <p>{{project.title}}</p>
-        <a class='button' :href="profile.link"></a>
-      </div>
+      <h2>{{project.title}}</h2>
     </div>
     </div>
   </div>
@@ -89,7 +85,7 @@ computed: {
           border-radius: 8px;
           color: #fff;
 
-          text {
+          h2 {
             
             top: 50%;
             left: 50%;
