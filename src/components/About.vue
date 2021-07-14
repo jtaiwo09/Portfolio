@@ -22,7 +22,10 @@
             Repellendus natus praesentium, quo temporibus autem cum ex maxime a
             ad. Quam qui accusamus nesciunt eligendi repellendus voluptatem nam.
           </p>
-          <a class="button" href="https://drive.google.com/uc?export=download&id=0BzSnhRy7DFPNeVpWU3pvcUx5WVVoZ2VhNUFybGhSZnBScDE0" target="_blank">Download CV</a>
+          <div class='download' @click='download'>
+            <span>Download CV</span>
+            <i class="fa fa-download" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -37,7 +40,7 @@ export default {
   mixins: [mixin],
   methods: {
     download(){
-        window.location.href = 'https://drive.google.com/uc?export=download&id=0BzSnhRy7DFPNeVpWU3pvcUx5WVVoZ2VhNUFybGhSZnBScDE0';
+        window.location.href = "https://drive.google.com/uc?export=download&id=0BzSnhRy7DFPNeVpWU3pvcUx5WVVoZ2VhNUFybGhSZnBScDE0";
     }
   }
 
@@ -79,9 +82,22 @@ export default {
       p {
         text-align: justify;
       }
-      .button {
-        padding: 10px 30px;
-        font-size: 20px;
+      .download {
+        display: flex;
+        padding: 10px 16px;
+        background: crimson;
+        color: #fff;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 10px;
+
+        span {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+        i {
+          color: #fff;
+        }
       }
     }
   }

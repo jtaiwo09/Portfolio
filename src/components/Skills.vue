@@ -55,6 +55,10 @@
                   <p>SASS</p>
                 </div>
                 <div class="item-container">
+                  <img :src="require('../assets/Icons/vue.png')" alt="">
+                  <p>Vue</p>
+                </div>
+                <div class="item-container">
                   <img :src="require('../assets/Icons/react.svg')" alt="">
                   <p>React</p>
                 </div>
@@ -201,6 +205,19 @@ name: 'skills',
         }
       }
       }
+  }
+}
+
+@media (max-width: 780px) {
+  .skills {
+    .other-skills {
+      .bg {
+        padding: 30px;
+        .skills-content {
+          gap: 12px;
+        }
+      }
+    }
   }
 }
 
