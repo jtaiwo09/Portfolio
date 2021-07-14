@@ -63,6 +63,7 @@ footer {
         .right { 
             p {
             color: #fff;
+            font-size: 12px;
         }
         }
     }
