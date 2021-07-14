@@ -119,6 +119,7 @@ methods: {
             }
             p {
               margin-bottom: 10px;
+              font-size: 12px;
             }
             .action-btn {
               display: flex;
