@@ -31,12 +31,12 @@ import About from '../components/About.vue';
 import Skills from '../components/Skills.vue';
 import Works from '../components/Works.vue';
 import Footer from '../components/Footer.vue';
-// import Contact from '../components/Contact.vue';
+import Contact from '../components/Contact.vue';
 import mixin from '../mixins/mixin';
 
 export default {
   name: "home",
-  components: {Navigation, About, Skills, Works, Footer},
+  components: {Navigation, About, Skills, Works, Footer, Contact},
   data(){
     return {
       scrollPos: 0,
