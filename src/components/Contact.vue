@@ -38,7 +38,8 @@ data(){
         name: '',
         email: '',
         subject: '',
-        message: ''
+        message: '',
+        errors: '',
     }
 },
 methods: {
@@ -50,8 +51,10 @@ methods: {
           email: this.email,
       })
         .then((result) => {
+            this.error = 'Message sent'
             console.log('SUCCESS!', result.status, result.text);
         }, (error) => {
+            this.error = 'Message not sent'
             console.log('FAILED...', error);
         });
     }

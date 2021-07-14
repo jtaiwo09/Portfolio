@@ -113,13 +113,13 @@ methods: {
             top: 20px;
 
             h2 {
-              font-size: 20px;
+              font-size: 18px;
               font-weight: 600;
               margin-bottom: 10px;
             }
             p {
               margin-bottom: 10px;
-              font-size: 12px;
+              font-size: 14px;
             }
             .action-btn {
               display: flex;
