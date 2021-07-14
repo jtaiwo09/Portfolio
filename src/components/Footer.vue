@@ -71,7 +71,7 @@ footer {
 
 @media (max-width: 600px) {
     footer {
-        padding: 20px 0;
+        padding: 10px 0;
         .container {
             flex-direction: column;
             justify-content: center;

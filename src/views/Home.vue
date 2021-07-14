@@ -113,7 +113,7 @@ export default {
 .scroll-up-btn-show {
   opacity: 1;
   pointer-events: auto;
-  bottom: 100px;
+  bottom: 80px;
 }
 
 .home {
