@@ -6,7 +6,6 @@
                 <div class="left">
                     <div class="text">My Creative skills & experiences</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iusto, reprehenderit repellat ad aut animi debitis, nostrum excepturi rerum dolore praesentium, voluptatibus amet consequatur. Vitae assumenda esse eos inventore aspernatur rerum, tempore minima soluta quidem hic, veritatis accusamus labore quam quia? Porro corporis laudantium fugiat illo, quos sunt perspiciatis assumenda in, voluptatibus suscipit repellat nemo, itaque temporibus earum! Nulla, quae.</p>
-                    <a class='button' href="#">Read more</a>
                 </div>
                 <div class="right">
                     <div class="bars">
@@ -114,10 +113,6 @@ name: 'skills',
       }
       p {
         text-align: justify;
-      }
-      .button {
-        font-size: 18px;
-        padding: 8px 16px;
       }
     }
     .right {

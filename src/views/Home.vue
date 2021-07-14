@@ -20,6 +20,7 @@
   <Skills />
   <Works />
   <Contact />
+  <Footer />
 </template>
 
 <script>
@@ -29,12 +30,13 @@ import Navigation from '../components/Navigation.vue';
 import About from '../components/About.vue';
 import Skills from '../components/Skills.vue';
 import Works from '../components/Works.vue';
-import Contact from '../components/Contact.vue';
+import Footer from '../components/Footer.vue';
+// import Contact from '../components/Contact.vue';
 import mixin from '../mixins/mixin';
 
 export default {
   name: "home",
-  components: {Navigation, About, Skills, Works, Contact},
+  components: {Navigation, About, Skills, Works, Footer},
   data(){
     return {
       scrollPos: 0,
@@ -111,7 +113,7 @@ export default {
 .scroll-up-btn-show {
   opacity: 1;
   pointer-events: auto;
-  bottom: 30px;
+  bottom: 100px;
 }
 
 .home {
@@ -297,5 +299,14 @@ export default {
         }
       }
     }
+}
+ .before-enter {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-out;
+}
+.enter {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>
