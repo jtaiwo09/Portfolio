@@ -41,7 +41,7 @@ name: 'footer-vue',
 <style lang="scss">
 footer {
     background: crimson;
-    padding: 30px 25px;
+    padding: 25px 20px;
 
     .container {
         display: flex;

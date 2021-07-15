@@ -64,6 +64,7 @@ methods: {
 
 <style lang="scss" scoped>
 .contact {
+    margin-bottom: 40px;
     .title {
         &::after {
             content: 'get in touch';
@@ -71,7 +72,7 @@ methods: {
     }
     .content {
         background: #f1f1f1;
-        padding: 20px 10px;
+        padding: 30px 15px;
         
         .right {
             max-width: 500px;

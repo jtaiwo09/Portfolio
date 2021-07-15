@@ -40,11 +40,7 @@ html {
 }
 
 section {
-  padding: 80px 0 0 0;
-
-  &:last-child {
-    margin-bottom: 100px;
-  }
+  padding-top: 80px;
 
   .title {
     text-align: center;

@@ -216,5 +216,20 @@ name: 'skills',
   }
 }
 
+@media (max-width: 385px) {
+  .skills {
+    .other-skills {
+      .bg {
+        padding: 10px;
+        .skills-content {
+          gap: 12px;
+          grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        }
+      }
+    }
+  }
+}
+
+
 
 </style>
