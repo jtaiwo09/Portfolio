@@ -61,7 +61,7 @@ methods: {
                 transition: 'bounce',
                 showIcon: 'true',
                 hideProgressBar: 'true',
-                timeout: 3000
+                timeout: 5000
             })
         })
         .catch(err => console.log(err))
