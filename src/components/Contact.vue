@@ -2,9 +2,8 @@
   <section class="contact" id="contact">
         <div class="container">
             <h2 class="title">Contact me</h2>
-            <div class="content">
+            <div class="content" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div class="right">
-                    <div class="text">Message me</div>
                     <form @submit.prevent="sendEmail">
                         <div class="field">
                             <input type="text" placeholder="Name" name="name" v-model="name" required>
@@ -30,6 +29,8 @@
 
 <script>
 import emailjs from 'emailjs-com';
+import { createToast } from 'mosha-vue-toastify';
+import 'mosha-vue-toastify/dist/style.css'
 
 export default {
 name: 'contact',
@@ -44,19 +45,30 @@ data(){
 },
 methods: {
     sendEmail(e) {
-      emailjs.sendForm('service_5mvmk79', 'template_u4cs6j9', e.target, 'user_k4aESwB4eZ5t902ZlAVe8', {
+      emailjs.sendForm('service_5mvmk76', 'template_u4cs6j9', e.target, 'user_k4aESwB4eZ5t902ZlAVe8', {
           message: this.message,
           name: this.name,
           subject: this.subject,
           email: this.email,
       })
-        .then((result) => {
-            this.error = 'Message sent'
-            console.log('SUCCESS!', result.status, result.text);
-        }, (error) => {
-            this.error = 'Message not sent'
-            console.log('FAILED...', error);
-        });
+        .then(() => {
+            createToast({
+                title: 'Message sent successfully',
+                description: 'Thanks for reaching out.'
+            }, {
+                position: 'top-right',
+                type: 'success',
+                transition: 'bounce',
+                showIcon: 'true',
+                hideProgressBar: 'true',
+                timeout: 3000
+            })
+        })
+        .catch(err => console.log(err))
+        this.message = '';
+        this.name = '';
+        this.subject = '';
+        this.email = '';
     }
 }
 }
@@ -71,18 +83,12 @@ methods: {
         }
     }
     .content {
-        background: #f1f1f1;
+        background: rgb(167, 136, 136);
         padding: 30px 15px;
         
         .right {
             max-width: 500px;
-            margin: auto
-        }
-
-        .text {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 10px;
+            margin: auto;
         }
         .right {
             form {

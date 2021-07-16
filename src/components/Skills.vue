@@ -3,11 +3,11 @@
         <div class="container">
             <h2 class="title">My skills</h2>
             <div class="content">
-                <div class="left">
+                <div class="left" data-aos="fade-up" data-aos-duration="1000">
                     <div class="text">My Creative skills & experiences</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iusto, reprehenderit repellat ad aut animi debitis, nostrum excepturi rerum dolore praesentium, voluptatibus amet consequatur. Vitae assumenda esse eos inventore aspernatur rerum, tempore minima soluta quidem hic, veritatis accusamus labore quam quia? Porro corporis laudantium fugiat illo, quos sunt perspiciatis assumenda in, voluptatibus suscipit repellat nemo, itaque temporibus earum! Nulla, quae.</p>
                 </div>
-                <div class="right">
+                <div class="right" data-aos="fade-up" data-aos-duration="1000">
                     <div class="bars">
                         <div class="info">
                             <span>HTML</span>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="other-skills">
+            <div class="other-skills" data-aos="fade-up" data-aos-duration="1000">
               <h2>Other Skills</h2>
               <div class="bg">
                 <div class="skills-content">
@@ -173,7 +173,7 @@ name: 'skills',
       .bg {
         padding: 45px;
         border-radius: 15px;
-        background-color: #f1f1f1;
+        background-color: rgb(167, 136, 136);
 
         .skills-content {
         display: grid;
@@ -223,7 +223,7 @@ name: 'skills',
         padding: 10px;
         .skills-content {
           gap: 12px;
-          grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
         }
       }
     }

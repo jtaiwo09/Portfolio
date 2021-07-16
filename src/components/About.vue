@@ -5,9 +5,11 @@
       <h2 class="title">About me</h2>
       <div class="content">
         <div class="left">
-          <img src="@/assets/images/profile-1.png" alt="" />
+          <div class="image-bg" data-aos="fade-right"  data-aos-duration="1000">
+            <img src="@/assets/images/profile-1.png" alt="" data-aos="fade-up"  data-aos-duration="1000"/>
+          </div>
         </div>
-        <div class="right">
+        <div class="right" data-aos="fade-up" data-aos-duration="1000">
           <div class="text">
             I'm Taiwo and I am a 
             <span class="typed-text">{{ typeValue}}</span>
@@ -57,16 +59,28 @@ export default {
   .content {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 
     .left {
       flex: 45%;
-      img {
-        width: 400px;
-        height: 400px;
+      .image-bg {
+        position: relative;
+        background: crimson;
+        border-radius: 6px;
+        width: 350px;
+        height: 350px;
+
+        img {
+        width: 350px;
+        height: 350px;
         object-fit: cover;
         border-radius: 6px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
       }
+      }
+      
     }
     .right {
       flex: 55%;

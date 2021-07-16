@@ -122,10 +122,10 @@ header {
 
         .link {
             padding: 15px 0;
-            margin-bottom: 15px;
-            display: inline block;
+            margin-bottom: 10px;
+            display: block;
             color: #fff;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 500;
             transition: color 0.3s ease;
             text-transform: uppercase;

@@ -4,7 +4,7 @@
             <h2 class="title">Projects</h2>
             <div class="content">
               <div class="cards">
-                <div class="card" v-for="(project, i) in projects" :key="i" @mouseover=" showIndex = i" @mouseout=" showIndex = null">
+                <div class="card"  data-aos="fade-up" data-aos-duration="1500" v-for="(project, i) in projects" :key="i" @mouseover=" showIndex = i" @mouseout=" showIndex = null">
                   <img :src="require(`@/assets/images/${project.image}`)" alt="">
                   <div :class="showOverlay(i)">
                     <div class="hover-content">

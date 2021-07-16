@@ -242,6 +242,24 @@ export default {
       }
     }
   }
+  .about {
+      .content {
+        .left {
+          margin-bottom: 30px;
+          .image-bg {
+            width: 300px;
+            height: 300px;
+            img {
+              height: 300px;
+              width: 300px;
+            }
+          }
+        }
+        .right {
+          p { text-align: initial}
+        }
+      }
+  }
 }
 
 @media (max-width: 690px) {
@@ -271,10 +289,14 @@ export default {
     .about {
       .content {
         .left {
-          img {
-          height: 300px;
-          width: 300px;
-        }
+          .image-bg {
+            width: 250px;
+            height: 250px;
+            img {
+              height: 250px;
+              width: 250px;
+            }
+          }
         }
       }
     }
@@ -292,10 +314,16 @@ export default {
     .about {
       .content {
         .left {
-          img {
-          height: 200px;
-          width: 200px;
-        }
+          .image-bg {
+            width: 200px;
+            height: 200px;
+            img {
+              height: 200px;
+              width: 200px;
+              top: 10px;
+              left: 10px;
+            }
+          }
         }
       }
     }
