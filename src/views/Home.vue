@@ -224,6 +224,15 @@ export default {
   .content {
     flex-direction: column;
   }
+  .home {
+    .container {
+      .home-content {
+        .text-3 {
+          height: 70px;
+        }
+      }
+    }
+  }
   .skills {
     .title {
           margin-bottom: 40px;
@@ -283,7 +292,7 @@ export default {
         
         padding-left: 10px;
         .text-2 { font-size: 50px;}
-        .text-3 { font-size: 20px;}
+        .text-3 { font-size: 20px; height: 40px !important;}
       }
     }
     .about {
