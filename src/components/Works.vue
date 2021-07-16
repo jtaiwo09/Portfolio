@@ -72,11 +72,8 @@ methods: {
           background: #000;
           border-radius: 8px;
           color: #fff;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
           transition: all 0.3s ease-in;
-          opacity: 1;
+          opacity: 0.9;
 
           .hover-content {
             display: flex;
@@ -85,7 +82,7 @@ methods: {
             align-items: center;
             padding: 0 15px;
             text-align: center;
-            top: 20px;
+            margin-top: 40px;
 
             h2 {
               font-size: 18px;
@@ -148,57 +145,7 @@ methods: {
         }
 
         .overlay {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 0;
-          width: 100%;
-          background: #000;
-          border-radius: 8px;
-          color: #fff;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          transition: all 0.3s ease-in;
-          opacity: 0;
-
-          .hover-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 15px;
-            text-align: center;
-            top: 20px;
-
-            h2 {
-              font-size: 18px;
-              font-weight: 600;
-              margin-bottom: 10px;
-            }
-            p {
-              margin-bottom: 10px;
-              font-size: 14px;
-            }
-            .action-btn {
-              display: flex;
-              gap: 20px;
-
-              .button {
-                padding: 8px 12px;
-                text-transform: uppercase;
-                font-size: 12px;
-                cursor: pointer;
-
-                &:hover{
-                  background: crimson;
-                  color: #fff;
-                }
-              }
-            }
-          }
+          display: none;
         }
         
         &:hover {

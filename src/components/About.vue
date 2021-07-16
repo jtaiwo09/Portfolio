@@ -87,14 +87,16 @@ export default {
       .text {
         font-size: 25px;
         font-weight: 600;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        line-height: 1.1;
+        height: 50px;
 
         span {
           color: crimson;
         }
       }
       p {
-        text-align: justify;
+        text-align: initial;
       }
       .download {
         display: flex;
