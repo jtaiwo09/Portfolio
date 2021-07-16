@@ -16,13 +16,9 @@
             <span class="cursor" :class="{'typing': typeStatus }">&nbsp;</span>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
-            aspernatur optio ex facere itaque inventore minima, quae corporis?
-            Adipisci ipsam dolores ratione dignissimos fugiat corporis molestiae
-            asperiores, sequi eligendi eaque dolorem id nulla odit, sapiente
-            itaque veritatis, reprehenderit cupiditate dolorum nesciunt.
-            Repellendus natus praesentium, quo temporibus autem cum ex maxime a
-            ad. Quam qui accusamus nesciunt eligendi repellendus voluptatem nam.
+            I’m a Front-End Developer based in Lagos, Nigeria. I am passionate about coding, solving problems through code, and creating intuitive, and dynamic user experiences.<br />
+
+            I'm a well organised person, a problem solver with high attention to detail. I'm Interested in the entire frontend spectrum and I am excited to work alongside with other amazing programmers and learn so much more!
           </p>
           <div class='download' @click='download'>
             <span>Download CV</span>
@@ -85,7 +81,7 @@ export default {
     .right {
       flex: 55%;
       .text {
-        font-size: 25px;
+        font-size: 23px;
         font-weight: 600;
         margin-bottom: 8px;
         line-height: 1.1;
@@ -96,7 +92,7 @@ export default {
         }
       }
       p {
-        text-align: initial;
+        text-align: justify;
       }
       .download {
         display: flex;

@@ -5,7 +5,7 @@
             <div class="content">
                 <div class="left" data-aos="fade-up" data-aos-duration="1000">
                     <div class="text">My Creative skills & experiences</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iusto, reprehenderit repellat ad aut animi debitis, nostrum excepturi rerum dolore praesentium, voluptatibus amet consequatur. Vitae assumenda esse eos inventore aspernatur rerum, tempore minima soluta quidem hic, veritatis accusamus labore quam quia? Porro corporis laudantium fugiat illo, quos sunt perspiciatis assumenda in, voluptatibus suscipit repellat nemo, itaque temporibus earum! Nulla, quae.</p>
+                    <p>My few years of IT experience has given me a strong foundation for web development and building complex solutions. I have created successful responsive web applications that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JavaScript, building small and medium web apps, and coding interactive layouts. I currently work at Spleet Africa.</p>
                 </div>
                 <div class="right" data-aos="fade-up" data-aos-duration="1000">
                     <div class="bars">
@@ -110,6 +110,7 @@ name: 'skills',
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 10px;
+        line-height: 1.3;
       }
       p {
         text-align: justify;
