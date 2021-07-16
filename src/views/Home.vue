@@ -276,7 +276,7 @@ export default {
 
 @media (max-width: 500px) {
   .container {
-    padding: 0 30px;
+    padding: 0 15px;
   }
   .home {
       .home-content {
@@ -324,6 +324,9 @@ export default {
               left: 10px;
             }
           }
+        }
+        .right {
+          .text { font-size: 20px;}
         }
       }
     }
