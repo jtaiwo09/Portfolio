@@ -45,7 +45,7 @@ data(){
 },
 methods: {
     sendEmail(e) {
-      emailjs.sendForm('service_5mvmk76', 'template_u4cs6j9', e.target, 'user_k4aESwB4eZ5t902ZlAVe8', {
+      emailjs.sendForm('service_5mvmk79', 'template_u4cs6j9', e.target, 'user_k4aESwB4eZ5t902ZlAVe8', {
           message: this.message,
           name: this.name,
           subject: this.subject,
