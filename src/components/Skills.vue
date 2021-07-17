@@ -3,11 +3,11 @@
         <div class="container">
             <h2 class="title">My skills</h2>
             <div class="content">
-                <div class="left" data-aos="fade-up" data-aos-duration="1000">
+                <div class="left" data-aos="slide-up" data-aos-duration="1000">
                     <div class="text">My Creative skills & experiences</div>
-                    <p>My few years of IT experience has given me a strong foundation for web development and building complex solutions. I have created successful responsive web applications that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JavaScript, building small and medium web apps, and coding interactive layouts. I currently work at Spleet Africa.</p>
+                    <p>My few years of IT experience has given me a strong foundation for web development and building complex solutions. I have created successful responsive web applications that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JavaScript, building small and medium web apps, and coding interactive layouts.</p>
                 </div>
-                <div class="right" data-aos="fade-up" data-aos-duration="1000">
+                <div class="right" data-aos="slide-up" data-aos-duration="1000">
                     <div class="bars">
                         <div class="info">
                             <span>HTML</span>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="other-skills" data-aos="fade-up" data-aos-duration="1000">
+            <div class="other-skills" data-aos="slide-up" data-aos-duration="1000">
               <h2>Other Skills</h2>
               <div class="bg">
                 <div class="skills-content">
@@ -72,10 +72,6 @@
                 <div class="item-container">
                   <img :src="require('../assets/Icons/jquery.svg')" alt="">
                   <p>JQuery</p>
-                </div>
-                <div class="item-container">
-                  <img :src="require('../assets/Icons/vscode.svg')" alt="">
-                  <p>VS Code</p>
                 </div>
               </div>
               </div>
@@ -113,7 +109,7 @@ name: 'skills',
         line-height: 1.3;
       }
       p {
-        text-align: justify;
+        text-align: initial;
       }
     }
     .right {
@@ -172,7 +168,7 @@ name: 'skills',
     }
 
       .bg {
-        padding: 45px;
+        padding: 20px;
         border-radius: 15px;
         background-color: rgb(167, 136, 136);
 

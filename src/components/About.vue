@@ -9,16 +9,11 @@
             <img src="@/assets/images/profile-1.png" alt="" data-aos="fade-up"  data-aos-duration="1000"/>
           </div>
         </div>
-        <div class="right" data-aos="fade-up" data-aos-duration="1000">
-          <div class="text">
-            I'm Taiwo and I am a 
-            <span class="typed-text">{{ typeValue}}</span>
-            <span class="cursor" :class="{'typing': typeStatus }">&nbsp;</span>
-          </div>
+        <div class="right" data-aos="slide-up" data-aos-duration="1000">
           <p>
-            I’m a Front-End Developer based in Lagos, Nigeria. I am passionate about coding, solving problems through code, and creating intuitive, and dynamic user experiences.<br />
+            I’m a Front-End Developer based in Lagos, Nigeria. I am passionate about coding, solving problems through code, and creating intuitive, and dynamic user experiences.</p>
 
-            I'm a well organised person, a problem solver with high attention to detail. I'm Interested in the entire frontend spectrum and I am excited to work alongside with other amazing programmers and learn so much more!
+            <p>I'm a well organised person, a problem solver with high attention to detail. I'm Interested in the entire frontend spectrum and I am excited to work alongside with other amazing programmers and learn so much more!
           </p>
           <div class='download' @click='download'>
             <span>Download CV</span>
@@ -85,14 +80,13 @@ export default {
         font-weight: 600;
         margin-bottom: 8px;
         line-height: 1.1;
-        height: 50px;
 
         span {
           color: crimson;
         }
       }
       p {
-        text-align: justify;
+        text-align: initial;
       }
       .download {
         display: flex;
@@ -101,7 +95,7 @@ export default {
         color: #fff;
         border-radius: 8px;
         display: inline-block;
-        margin-top: 10px;
+        margin-top: 20px;
 
         span {
           font-size: 14px;

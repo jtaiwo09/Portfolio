@@ -2,7 +2,7 @@
   <header :class='{"sticky" : bgHeader}'>
       <div class="container">
             <div class="brand">
-                <a href='#home'>Portfo<span>lio.</span></a>
+                <a href='#home'>JTK-Portfo<span>lio.</span></a>
             </div>
             <nav class="nav-links" v-if="!mobile">
                 <a href="#home" class="link">Home</a>
