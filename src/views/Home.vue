@@ -7,7 +7,7 @@
     <div class="container">
       <div class="home-content">
         <div class="text-1">HI THERE! 👋 I'M</div>
-        <div class="text-2">Taiwo Joseph</div>
+        <div class="text-2">Joseph Taiwo</div>
         <div class="text-3">I'm a 
           <span class="typed-text">{{ typeValue}}</span>
           <span class="cursor" :class="{'typing': typeStatus }">&nbsp;</span>

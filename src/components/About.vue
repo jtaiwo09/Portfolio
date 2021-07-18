@@ -5,17 +5,29 @@
       <h2 class="title">About me</h2>
       <div class="content">
         <div class="left">
-          <div class="image-bg" data-aos="fade-right"  data-aos-duration="1000">
-            <img src="@/assets/images/profile-1.png" alt="" data-aos="fade-up"  data-aos-duration="1000"/>
+          <div class="image-bg" data-aos="fade-right" data-aos-duration="1000">
+            <img
+              src="@/assets/images/profile-1.png"
+              alt=""
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            />
           </div>
         </div>
         <div class="right" data-aos="slide-up" data-aos-duration="1000">
           <p>
-            I’m a Front-End Developer based in Lagos, Nigeria. I am passionate about coding, solving problems through code, and creating intuitive, and dynamic user experiences.</p>
-
-            <p>I'm a well organised person, a problem solver with high attention to detail. I'm Interested in the entire frontend spectrum and I am excited to work alongside with other amazing programmers and learn so much more!
+            I’m a Front-End Web Developer based in Lagos, Nigeria. I am passionate
+            about coding, solving problems through code, and creating intuitive,
+            and dynamic user experiences.
           </p>
-          <div class='download' @click='download'>
+
+          <p>
+            I'm a well organised person, a problem solver with high attention to
+            detail. I'm Interested in the entire frontend spectrum and I am
+            excited to work alongside with other amazing programmers and learn
+            so much more!
+          </p>
+          <div class="download" @click="download">
             <span>Download CV</span>
             <i class="fa fa-download" aria-hidden="true"></i>
           </div>
@@ -26,18 +38,17 @@
 </template>
 
 <script>
-// import {storage} from '../firebase/firebase';
-import mixin from '../mixins/mixin';
+import mixin from "../mixins/mixin";
 
 export default {
   mixins: [mixin],
   methods: {
-    download(){
-        window.location.href = "https://drive.google.com/uc?export=download&id=0BzSnhRy7DFPNeVpWU3pvcUx5WVVoZ2VhNUFybGhSZnBScDE0";
-    }
-  }
-
-}
+    download() {
+      window.location.href =
+        "https://drive.google.com/uc?export=download&id=1O26D3nIzwb0CRE39BxXejwwfEkYNI8r5";
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -62,16 +73,15 @@ export default {
         height: 350px;
 
         img {
-        width: 350px;
-        height: 350px;
-        object-fit: cover;
-        border-radius: 6px;
-        position: absolute;
-        top: 15px;
-        left: 15px;
+          width: 350px;
+          height: 350px;
+          object-fit: cover;
+          border-radius: 6px;
+          position: absolute;
+          top: 15px;
+          left: 15px;
+        }
       }
-      }
-      
     }
     .right {
       flex: 55%;
@@ -96,6 +106,7 @@ export default {
         border-radius: 8px;
         display: inline-block;
         margin-top: 20px;
+        cursor: pointer;
 
         span {
           font-size: 14px;
@@ -108,5 +119,4 @@ export default {
     }
   }
 }
-
 </style>
