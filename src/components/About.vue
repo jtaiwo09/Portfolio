@@ -45,7 +45,7 @@ export default {
   methods: {
     download() {
       window.location.href =
-        "https://drive.google.com/uc?export=download&id=1BU0dMolUNnrcZcX3slBvQkODIQb2DB6j";
+        "https://drive.google.com/uc?export=download&id=1t1_V49H1TwxR9MkKQAnBEGkboVqJjwHn";
     },
   },
 };
