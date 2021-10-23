@@ -21,13 +21,18 @@ export default createStore({
       {
         id: 4,
         image: 'chat.png',
-        link: ' https://socialapp-53957.web.app',
+        link: 'https://socialapp-53957.web.app',
       },
       {
         id: 5,
         image: 'ecommerce.png',
-        link: ' https://clone-435ec.web.app'
-      }, 
+        link: 'https://clone-435ec.web.app'
+      },
+      {
+        id: 6,
+        image: 'vca.png',
+        link: 'https://vca-jtk.netlify.app'
+      },
     ]
   },
   mutations: {},
