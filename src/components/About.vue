@@ -45,7 +45,7 @@ export default {
   methods: {
     download() {
       window.location.href =
-        "https://drive.google.com/uc?export=download&id=1t1_V49H1TwxR9MkKQAnBEGkboVqJjwHn";
+        "https://drive.google.com/uc?export=download&id=1DRwCrxPmZfPxJ3CCYI4jtVMn2LWXAKal";
     },
   },
 };
@@ -97,6 +97,11 @@ export default {
       }
       p {
         text-align: initial;
+        font-size: 18px;
+        font-weight: 300;
+        // word-spacing: 1px;
+        line-height: 30px;
+        margin-bottom: 10px;
       }
       .download {
         display: flex;

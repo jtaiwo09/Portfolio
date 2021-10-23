@@ -102,14 +102,18 @@ name: 'skills',
       flex: 50%;
     }
     .left {
+      margin-bottom: 20px;
       .text {
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
         margin-bottom: 10px;
         line-height: 1.3;
       }
       p {
-        text-align: initial;
+        text-align: justify;
+        line-height: 30px;
+        font-weight: 300;
+        font-size: 18px;
       }
     }
     .right {
@@ -163,7 +167,7 @@ name: 'skills',
     margin-top: 30px;
     h2 {
       font-size: 20px;;
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 10px;
     }
 

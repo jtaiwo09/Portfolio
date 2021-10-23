@@ -307,6 +307,20 @@ export default {
             }
           }
         }
+        .right {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .skills {
+      .content {
+        .left {
+          p {
+            font-size: 16px;
+          }
+        }
       }
     }
 }

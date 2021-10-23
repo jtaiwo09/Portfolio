@@ -4,19 +4,16 @@
             <h2 class="title">Projects</h2>
             <div class="content">
               <div class="cards">
-                <div class="card"  data-aos="zoom-in" data-aos-duration="2000" v-for="(project, i) in projects" :key="i" @mouseover=" showIndex = i" @mouseout=" showIndex = null">
-                  <img :src="require(`@/assets/images/${project.image}`)" alt="">
-                  <div :class="showOverlay(i)">
-                    <div class="hover-content">
-                      <h2>{{project.title}}</h2>
-                      <p>{{project.description}}</p>
-                      <div class="action-btn">
-                        <button class="button" @click="visitLink(project.link)">Visit Site</button>
-                        <button class="button" :disabled="disabled" @click="visitLink(project.github)">Github</button>
-                      </div>
-                    </div>
+                <div class="card" v-for="(project, i) in projects" :key="i">
+                  <div class="browser">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
                   </div>
-              </div>
+                  <a :href="project.link" target="_blank">
+                    <img class="card-image" :src="require(`@/assets/images/${project.image}`)" alt="">
+                  </a>
+                </div>
             </div>
             </div>
           </div>
@@ -37,81 +34,10 @@ computed: {
     return this.$store.state.projects;
   }
 },
-methods: {
-  visitLink(url){
-    if(url != ""){
-      this.disabled = false;
-      window.open(url);
-      return;
-    } else {
-      this.disabled = true;
-      return;
-    }
-  },
-  showOverlay(i){
-    if(this.showIndex == i){
-      return 'overlay-show';
-    } else {
-      return 'overlay';
-    }
-  }
-}
-
 }
 </script>
 
 <style lang="scss">
-.overlay-show {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          background: #000;
-          border-radius: 8px;
-          color: #fff;
-          transition: all 0.3s ease-in;
-          opacity: 0.9;
-
-          .hover-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 15px;
-            text-align: center;
-            margin-top: 40px;
-
-            h2 {
-              font-size: 18px;
-              font-weight: 600;
-              margin-bottom: 10px;
-            }
-            p {
-              margin-bottom: 10px;
-              font-size: 14px;
-            }
-            .action-btn {
-              display: flex;
-              gap: 20px;
-
-              .button {
-                padding: 8px 12px;
-                text-transform: uppercase;
-                font-size: 12px;
-                cursor: pointer;
-
-                &:hover{
-                  background: crimson;
-                  color: #fff;
-                }
-              }
-            }
-          }
-        }
-
 .works {
   .container {
     .title {
@@ -127,29 +53,41 @@ methods: {
 
       .card{
         max-height: 300px;
-        max-width: 250px;
-        background: #fff;
+        max-width: 350px;
         margin-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 8px;
-        transition: all 0.5s ease;
-        box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+        border-radius: 10px 10px 0 0;
+        border: 2px solid rgb(243, 242, 242);
+        overflow: hidden;
         position: relative;
+
+        .browser {
+          height: 20px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          background-color: gray;
+          position: sticky;
+          z-index: 2;
+
+          .circle {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 3px;
+          }
+        }
+
+        &:hover {
+          img {
+            transform: translateY(-100%);
+          }
+        }
 
         img {
           width: 100%;
-          height: 100%;
           object-fit: cover;
-          border-radius: 8px;
-        }
-
-        .overlay {
-          display: none;
-        }
-        
-        &:hover {
-          box-shadow: 8px 14px 12px rgba(0,0,0,0.6);
+          transition: all 10s ease;
         }
       }
     }

@@ -83,7 +83,7 @@ methods: {
         }
     }
     .content {
-        background: rgb(167, 136, 136);
+        background: lightgray;
         padding: 30px 15px;
         
         .right {
