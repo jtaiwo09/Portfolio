@@ -1,16 +1,17 @@
 <template>
-    <div class="scroll-up-btn" :class="toggleScrollUpBtn" @click="handleScroll">
-        <i class="fas fa-angle-up"></i>
-    </div>
-    <Navigation />
+  <div class="scroll-up-btn" :class="toggleScrollUpBtn" @click="handleScroll">
+    <i class="fas fa-angle-up"></i>
+  </div>
+  <Navigation />
   <section class="home" id="home">
     <div class="container">
       <div class="home-content">
         <div class="text-1">HI THERE! 👋 I'M</div>
         <div class="text-2">Joseph Taiwo</div>
-        <div class="text-3">I'm a 
-          <span class="typed-text">{{ typeValue}}</span>
-          <span class="cursor" :class="{'typing': typeStatus }">&nbsp;</span>
+        <div class="text-3">
+          I'm a
+          <span class="typed-text">{{ typeValue }}</span>
+          <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
         </div>
         <a class="button" href="#contact">Hire me</a>
       </div>
@@ -26,54 +27,54 @@
 <script>
 // import { VueperSlides, VueperSlide } from 'vueperslides'
 // import 'vueperslides/dist/vueperslides.css'
-import Navigation from '../components/Navigation.vue';
-import About from '../components/About.vue';
-import Skills from '../components/Skills.vue';
-import Works from '../components/Works.vue';
-import Footer from '../components/Footer.vue';
-import Contact from '../components/Contact.vue';
-import mixin from '../mixins/mixin';
+import Navigation from "../components/Navigation.vue";
+import About from "../components/About.vue";
+import Skills from "../components/Skills.vue";
+import Works from "../components/Works.vue";
+import Footer from "../components/Footer.vue";
+import Contact from "../components/Contact.vue";
+import mixin from "../mixins/mixin";
 
 export default {
   name: "home",
-  components: {Navigation, About, Skills, Works, Footer, Contact},
-  data(){
+  components: { Navigation, About, Skills, Works, Footer, Contact },
+  data() {
     return {
       scrollPos: 0,
       showScrollUpBtn: null,
-    }
+    };
   },
   mixins: [mixin],
-  created(){
-    window.addEventListener('scroll', this.checkScroll);
+  created() {
+    window.addEventListener("scroll", this.checkScroll);
   },
   computed: {
-    projects (){
-        return this.$store.state.projects
+    projects() {
+      return this.$store.state.projects;
     },
     toggleScrollUpBtn() {
-      return this.showScrollUpBtn ? 'scroll-up-btn-show' : ''
-    }
-},
+      return this.showScrollUpBtn ? "scroll-up-btn-show" : "";
+    },
+  },
   methods: {
-    checkScroll(){
+    checkScroll() {
       this.scrollPos = window.scrollY;
     },
-    handleScroll(){
-      window.scrollTo({top: 0, behaviour: 'smooth'})
+    handleScroll() {
+      window.scrollTo({ top: 0, behaviour: "smooth" });
     },
   },
   watch: {
-    scrollPos(newValue){
-      if(newValue > 500){
+    scrollPos(newValue) {
+      if (newValue > 500) {
         this.showScrollUpBtn = true;
         return;
       } else {
         this.showScrollUpBtn = false;
         return;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -88,7 +89,6 @@ export default {
     opacity: 0;
   }
 }
-
 
 //scroll-up-btn
 .scroll-up-btn {
@@ -125,7 +125,9 @@ export default {
   min-height: 500px;
 
   .container {
-    margin: auto 0 auto 0px;
+    margin: auto;
+    width: 100%;
+    max-width: 1300px;
   }
   .home-content {
     .button {
@@ -165,17 +167,16 @@ export default {
 }
 
 @keyframes cursorBlink {
-  49% { background-color: #fff; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
+  49% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
 }
-
-
-
-
-
-
-
 
 @media (max-width: 1104px) {
   .about {
@@ -206,16 +207,15 @@ export default {
         font-size: 35px;
       }
       .button {
-          font-size: 23px;
-          padding: 10px 30px;
+        font-size: 23px;
+        padding: 10px 30px;
       }
     }
     .container {
-        max-width: 800px;
+      max-width: 800px;
     }
   }
 }
-
 
 @media (max-width: 780px) {
   section {
@@ -235,52 +235,57 @@ export default {
   }
   .skills {
     .title {
-          margin-bottom: 40px;
-        }
+      margin-bottom: 40px;
+    }
     .content {
       gap: 0;
       .left {
         margin-bottom: 60px;
-        
       }
       .right {
         width: 100%;
         .bars {
-          width: 100%
+          width: 100%;
         }
       }
     }
   }
   .about {
-      .content {
-        .left {
-          margin-bottom: 30px;
-          .image-bg {
-            width: 300px;
+    .content {
+      .left {
+        margin-bottom: 30px;
+        .image-bg {
+          width: 300px;
+          height: 300px;
+          img {
             height: 300px;
-            img {
-              height: 300px;
-              width: 300px;
-            }
+            width: 300px;
           }
         }
-        .right {
-          p { text-align: initial}
+      }
+      .right {
+        p {
+          text-align: initial;
         }
       }
+    }
   }
 }
 
 @media (max-width: 690px) {
   .home {
-      .home-content {
-        .text-2 { font-size: 60px;}
-        .text-3 { font-size: 32px;}
-        .button {
-          font-size: 20px;
-        }
+    .home-content {
+      .text-2 {
+        font-size: 60px;
+      }
+      .text-3 {
+        font-size: 32px;
+      }
+      .button {
+        font-size: 20px;
       }
     }
+  }
 }
 
 @media (max-width: 500px) {
@@ -288,73 +293,79 @@ export default {
     padding: 0 15px;
   }
   .home {
-      .home-content {
-        
-        padding-left: 10px;
-        .text-2 { font-size: 50px;}
-        .text-3 { font-size: 20px; height: 40px !important;}
+    .home-content {
+      padding-left: 10px;
+      .text-2 {
+        font-size: 50px;
+      }
+      .text-3 {
+        font-size: 20px;
+        height: 40px !important;
       }
     }
-    .about {
-      .content {
-        .left {
-          .image-bg {
-            width: 250px;
+  }
+  .about {
+    .content {
+      .left {
+        .image-bg {
+          width: 250px;
+          height: 250px;
+          img {
             height: 250px;
-            img {
-              height: 250px;
-              width: 250px;
-            }
-          }
-        }
-        .right {
-          p {
-            font-size: 16px;
+            width: 250px;
           }
         }
       }
-    }
-    .skills {
-      .content {
-        .left {
-          p {
-            font-size: 16px;
-          }
+      .right {
+        p {
+          font-size: 16px;
         }
       }
     }
+  }
+  .skills {
+    .content {
+      .left {
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 435px) {
   .home {
-      .home-content {
-        .button {
-          font-size: 23px;
-          padding: 8px 25px;
-        }
+    .home-content {
+      .button {
+        font-size: 23px;
+        padding: 8px 25px;
       }
     }
-    .about {
-      .content {
-        .left {
-          .image-bg {
-            width: 200px;
+  }
+  .about {
+    .content {
+      .left {
+        .image-bg {
+          width: 200px;
+          height: 200px;
+          img {
             height: 200px;
-            img {
-              height: 200px;
-              width: 200px;
-              top: 10px;
-              left: 10px;
-            }
+            width: 200px;
+            top: 10px;
+            left: 10px;
           }
         }
-        .right {
-          .text { font-size: 20px;}
+      }
+      .right {
+        .text {
+          font-size: 20px;
         }
       }
     }
+  }
 }
- .before-enter {
+.before-enter {
   opacity: 0;
   transform: translateY(100px);
   transition: all 2s ease-out;
