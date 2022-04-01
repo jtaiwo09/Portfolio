@@ -16,9 +16,9 @@
         </div>
         <div class="right" data-aos="slide-up" data-aos-duration="1000">
           <p>
-            I’m a Front-End Web Developer based in Lagos, Nigeria. I am passionate
-            about coding, solving problems through code, and creating intuitive,
-            and dynamic user experiences.
+            I’m a Front-End Web Developer based in Lagos, Nigeria. I am
+            passionate about coding, solving problems through code, and creating
+            intuitive, and dynamic user experiences.
           </p>
 
           <p>
@@ -27,7 +27,7 @@
             excited to work alongside with other amazing programmers and learn
             so much more!
           </p>
-          <div class="download" @click="download">
+          <div class="download">
             <span>Download CV</span>
             <i class="fa fa-download" aria-hidden="true"></i>
           </div>
