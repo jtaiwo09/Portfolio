@@ -25,16 +25,21 @@ export default createStore({
       },
       {
         id: 5,
+        image: "makeup.png",
+        link: "https://thoughts-glam.netlify.app/",
+      },
+      {
+        id: 6,
         image: "chat.png",
         link: "https://socialapp-53957.web.app",
       },
       {
-        id: 6,
+        id: 7,
         image: "ecommerce.png",
         link: "https://clone-435ec.web.app",
       },
       {
-        id: 7,
+        id: 8,
         image: "vca.png",
         link: "https://vca-jtk.netlify.app",
       },
