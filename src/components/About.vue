@@ -7,7 +7,7 @@
         <div class="left">
           <div class="image-bg" data-aos="fade-right" data-aos-duration="1000">
             <img
-              src="@/assets/images/profile-1.png"
+              src="https://res.cloudinary.com/citi-tasker/image/upload/v1652806109/profile_hdqnbw.png"
               alt=""
               data-aos="fade-up"
               data-aos-duration="1000"

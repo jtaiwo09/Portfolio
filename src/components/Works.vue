@@ -1,40 +1,40 @@
 <template>
   <section class="works" id="works">
-          <div class="container">
-            <h2 class="title">Projects</h2>
-            <div class="content">
-              <div class="cards">
-                <div class="card" v-for="(project, i) in projects" :key="i">
-                  <div class="browser">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                  </div>
-                  <a :href="project.link" target="_blank">
-                    <img class="card-image" :src="require(`@/assets/images/${project.image}`)" alt="">
-                  </a>
-                </div>
+    <div class="container">
+      <h2 class="title">Projects</h2>
+      <div class="content">
+        <div class="cards">
+          <div class="card" v-for="(project, i) in projects" :key="i">
+            <div class="browser">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
             </div>
-            </div>
+            <a :href="project.link" target="_blank">
+              <img class="card-image" :src="project.image" alt="" />
+            </a>
           </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
 export default {
-name: 'works',
-data(){
-  return {
-    showIndex: null,
-    disabled: null,
-  }
-},
-computed: {
-  projects(){
-    return this.$store.state.projects;
-  }
-},
-}
+  name: "works",
+  data() {
+    return {
+      showIndex: null,
+      disabled: null,
+    };
+  },
+  computed: {
+    projects() {
+      return this.$store.state.projects;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -51,7 +51,7 @@ computed: {
       flex-wrap: wrap;
       gap: 20px;
 
-      .card{
+      .card {
         max-height: 300px;
         max-width: 350px;
         margin-bottom: 50px;
