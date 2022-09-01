@@ -41,7 +41,7 @@
               <textarea v-model="message" name="message" required></textarea>
             </div>
             <div class="btn">
-              <button type="submit">
+              <button type="submit" id="btn">
                 {{ loading ? "Sending..." : "Send message" }}
               </button>
             </div>
