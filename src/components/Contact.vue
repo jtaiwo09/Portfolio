@@ -41,7 +41,7 @@
               <textarea v-model="message" name="message" required></textarea>
             </div>
             <div class="btn">
-              <button type="submit" id="btn">
+              <button type="submit">
                 {{ loading ? "Sending..." : "Send message" }}
               </button>
             </div>
@@ -77,7 +77,7 @@ export default {
           process.env.VUE_APP_SERVICE,
           process.env.VUE_APP_TEMPLATE,
           e.target,
-          process.env.VUE_APP_PK
+          process.env.VUE_APP_PUBLIC_KEY
         )
         .then(() => {
           this.loading = false;
