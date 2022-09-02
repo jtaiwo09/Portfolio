@@ -27,10 +27,10 @@
             excited to work alongside with other amazing programmers and learn
             so much more!
           </p>
-          <div class="download">
+          <!-- <div class="download">
             <span>Download CV</span>
             <i class="fa fa-download" aria-hidden="true"></i>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
