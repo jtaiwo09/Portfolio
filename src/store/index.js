@@ -6,11 +6,17 @@ export default createStore({
       {
         id: 1,
         image:
+          "https://res.cloudinary.com/citi-tasker/image/upload/v1665488760/mktv_cbiyng.jpg",
+        link: "https://mktv.io/",
+      },
+      {
+        id: 2,
+        image:
           "https://res.cloudinary.com/citi-tasker/image/upload/v1652804862/spleet_eiplp1.png",
         link: " https://spleet.africa/",
       },
       {
-        id: 2,
+        id: 3,
         image:
           "https://res.cloudinary.com/citi-tasker/image/upload/v1662047289/jtk-store-nw-1_iqlri5.jpg",
         link: " https://jtk-sneakers.netlify.app/",
