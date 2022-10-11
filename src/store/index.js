@@ -4,6 +4,12 @@ export default createStore({
   state: {
     projects: [
       {
+        id: 0,
+        image:
+          "https://res.cloudinary.com/citi-tasker/image/upload/v1665488927/spleet-nw_gfa8jg.jpg",
+        link: "https://new-dev.spleet.africa/",
+      },
+      {
         id: 1,
         image:
           "https://res.cloudinary.com/citi-tasker/image/upload/v1665488760/mktv_cbiyng.jpg",
